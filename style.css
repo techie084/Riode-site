@@ -1,0 +1,90 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+@font-face {
+    font-family: headerFont;
+    src: url(fonts/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf);
+    font-weight: bold;
+}
+
+#header-section{
+    justify-content: space-evenly;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.411);
+}
+
+#header-section, #header-section > *{
+    display: flex;
+    align-items: center;
+}
+
+#icon-container > *{
+    margin-left: 1em;
+}
+
+#logo-container > *, #search-tab > *{
+    margin-left: 0.2em;
+}
+
+#logo-container span{
+    font-family: headerFont;
+    font-size: 1.3rem;
+}
+
+#logo{
+    max-width: 30px;
+}
+
+/* links styling */
+nav{
+    margin: 0.6em auto;
+}
+#menubar{
+    display: block;
+    margin: 0 auto;
+    width: fit-content;
+}
+
+#links-container{
+    display: none;
+}
+
+/* carousel styling */
+#header-article{
+    margin: 0 2em;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5em;
+}
+
+#carousel-container{
+    display: flex;
+    overflow: hidden;
+}
+
+.carousel{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(#DADEE1, #E6E7EB);
+}
+
+.carousel + .carousel{
+    display: none;
+}
+
+.carousel img{
+    max-width: 45%;
+    object-fit: cover;
+}
+
+@media  screen and (min-width: 800px) {
+    #header-article{
+        grid-template-columns: 70% 30%;
+    }
+    .carousel img{
+        max-width: 30%;
+    }
+}
